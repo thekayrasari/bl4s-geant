@@ -1,0 +1,60 @@
+/vis/open OGL
+
+/vis/viewer/set/autoRefresh false
+/vis/verbose errors
+
+/vis/drawVolume
+
+/vis/viewer/set/background white
+/vis/viewer/set/style surface
+/vis/viewer/set/viewpointVector -1 0 0
+/vis/viewer/set/lightsVector -1 0 0
+/vis/viewer/set/viewpointThetaPhi 115 150
+
+/vis/geometry/set/visibility World 0 false
+
+/vis/geometry/set/colour Cherenkov 0.65 0.65 0.65 0.20
+/vis/geometry/set/colour BremsTarget 0.45 0.45 0.45 0.35
+/vis/geometry/set/colour Phantom 0.75 0.75 0.75 0.20
+/vis/geometry/set/colour Collimator 0.35 0.35 0.35 0.45
+/vis/geometry/set/colour Scint1 0.70 0.70 0.70 0.20
+/vis/geometry/set/colour Scint2 0.70 0.70 0.70 0.20
+/vis/geometry/set/colour DWC1 0.80 0.80 0.80 0.15
+/vis/geometry/set/colour DWC2 0.80 0.80 0.80 0.15
+
+/vis/scene/add/trajectories smooth
+/tracking/storeTrajectory 2
+
+/vis/modeling/trajectories/create/drawByParticleID
+/vis/modeling/trajectories/drawByParticleID-0/set e- red
+/vis/modeling/trajectories/drawByParticleID-0/set gamma green
+/vis/modeling/trajectories/drawByParticleID-0/set e+ blue
+/vis/modeling/trajectories/drawByParticleID-0/default/setDrawStepPts false
+
+/vis/scene/endOfEventAction accumulate
+
+/vis/set/textColour black
+/vis/scene/add/text 14 -8 -90 cm 8 0 0 Cherenkov
+/vis/scene/add/text 14 -8 -75 cm 8 0 0 Tungsten
+/vis/scene/add/text 14 -8 -55 cm 8 0 0 Phantom
+/vis/scene/add/text 14 -8 -35 cm 8 0 0 Collimator
+/vis/scene/add/text 14 -8 -20 cm 8 0 0 Scint1
+/vis/scene/add/text 14 -8   5 cm 8 0 0 DWC1
+/vis/scene/add/text 14 -8  30 cm 8 0 0 DWC2
+/vis/scene/add/text 14 -8  60 cm 8 0 0 Scint2
+
+/vis/set/textColour black
+/vis/scene/add/text2D 0.08 0.16 10 ! ! Electron
+/vis/scene/add/text2D 0.08 0.12 10 ! ! Photon
+/vis/scene/add/text2D 0.08 0.08 10 ! ! Positron
+
+/vis/set/colour red
+/vis/scene/add/line2D 0.03 0.16 0.055 0.16
+/vis/set/colour green
+/vis/scene/add/line2D 0.03 0.12 0.055 0.12
+/vis/set/colour blue
+/vis/scene/add/line2D 0.03 0.08 0.055 0.08
+/vis/set/colour
+
+/vis/viewer/set/autoRefresh true
+/vis/verbose warnings

@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/edaerdogan/Desktop/geant4-v11.4.0/examples/basic/ComptonBeamline/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
