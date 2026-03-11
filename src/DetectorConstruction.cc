@@ -146,23 +146,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
                     checkOverlaps);
 
   //
-  // 3) Tissue phantom
-  //
-  auto solidPhantom = new G4Box("Phantom", detXY / 2., detXY / 2., phantomZ / 2.);
-
-  auto logicPhantom = new G4LogicalVolume(solidPhantom, tissue, "Phantom");
-
-  new G4PVPlacement(nullptr,
-                    G4ThreeVector(0, 0, -55.0 * cm),
-                    logicPhantom,
-                    "Phantom",
-                    logicWorld,
-                    false,
-                    0,
-                    checkOverlaps);
-
-  //
-  // 4) Collimator (lead block with cylindrical hole)
+  // 3) Collimator (lead block with cylindrical hole)
   //
   auto solidCollBlock = new G4Box("CollBlock", 6.0 * cm, 6.0 * cm, collZ / 2.);
   auto solidCollHole =
@@ -174,9 +158,25 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   auto logicCollimator = new G4LogicalVolume(solidCollimator, lead, "Collimator");
 
   new G4PVPlacement(nullptr,
-                    G4ThreeVector(0, 0, -35.0 * cm),
+                    G4ThreeVector(0, 0, -55.0 * cm),
                     logicCollimator,
                     "Collimator",
+                    logicWorld,
+                    false,
+                    0,
+                    checkOverlaps);
+
+//
+  // 4) Tissue phantom
+  //
+  auto solidPhantom = new G4Box("Phantom", detXY / 2., detXY / 2., phantomZ / 2.);
+
+  auto logicPhantom = new G4LogicalVolume(solidPhantom, tissue, "Phantom");
+
+  new G4PVPlacement(nullptr,
+                    G4ThreeVector(0, 0, -35.0 * cm),
+                    logicPhantom,
+                    "Phantom",
                     logicWorld,
                     false,
                     0,

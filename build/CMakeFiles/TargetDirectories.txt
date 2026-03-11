@@ -1,3 +1,3 @@
-/Users/edaerdogan/Desktop/geant4-v11.4.0/examples/basic/ComptonBeamline/build/CMakeFiles/exampleB1.dir
-/Users/edaerdogan/Desktop/geant4-v11.4.0/examples/basic/ComptonBeamline/build/CMakeFiles/edit_cache.dir
-/Users/edaerdogan/Desktop/geant4-v11.4.0/examples/basic/ComptonBeamline/build/CMakeFiles/rebuild_cache.dir
+/home/imdat/ComptonBeamline/build/CMakeFiles/exampleB1.dir
+/home/imdat/ComptonBeamline/build/CMakeFiles/edit_cache.dir
+/home/imdat/ComptonBeamline/build/CMakeFiles/rebuild_cache.dir

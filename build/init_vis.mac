@@ -7,8 +7,7 @@
 /run/verbose 2
 #
 # Change the default number of threads (in multi-threaded mode)
-/run/numberOfThreads 1 #this is a must for csv outputs. CSV için tek thread zorunluya yakın, çünkü şu an aynı dosyaya çoklu worker yazımı güvenli kurulmadı.
-
+#/run/numberOfThreads 4
 #
 # Initialize kernel
 /run/initialize

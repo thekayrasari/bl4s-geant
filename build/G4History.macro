@@ -1,101 +1,10 @@
 /run/verbose 2
-/run/numberOfThreads 1
 /run/initialize
 /control/execute vis.mac
-/vis/open OGL
-/vis/sceneHandler/create OGL
+/vis/open TSG
+/vis/sceneHandler/create TSG
 /vis/viewer/create ! ! 600x600-0+0
-/vis/viewer/set/autoRefresh false
-/vis/verbose errors
-/vis/drawVolume
-/vis/scene/create
-/vis/scene/add/volume world -1 -1 none m 0 0 0 0 0 0
-/vis/sceneHandler/attach
-/vis/viewer/set/background white
-/vis/viewer/set/style surface
-/vis/viewer/set/viewpointVector -1 0 0
-/vis/viewer/set/lightsVector -1 0 0
-/vis/viewer/set/viewpointThetaPhi 120 150
-/vis/geometry/set/visibility World 0 false
-/vis/scene/notifyHandlers
-/vis/geometry/set/colour Cherenkov 0.6 0.6 0.6 0.35
-/vis/scene/notifyHandlers
-/vis/geometry/set/colour BremsTarget 0.6 0.6 0.6 0.35
-/vis/scene/notifyHandlers
-/vis/geometry/set/colour Phantom 0.6 0.6 0.6 0.35
-/vis/scene/notifyHandlers
-/vis/geometry/set/colour Collimator 0.6 0.6 0.6 0.35
-/vis/scene/notifyHandlers
-/vis/geometry/set/colour Scint1 0.6 0.6 0.6 0.35
-/vis/scene/notifyHandlers
-/vis/geometry/set/colour Scint2 0.6 0.6 0.6 0.35
-/vis/scene/notifyHandlers
-/vis/geometry/set/colour DWC1 0.6 0.6 0.6 0.35
-/vis/scene/notifyHandlers
-/vis/geometry/set/colour DWC2 0.6 0.6 0.6 0.35
-/vis/scene/notifyHandlers
-/vis/scene/add/trajectories smooth
-/tracking/storeTrajectory 2
-/vis/scene/notifyHandlers
-/tracking/storeTrajectory 2
-/vis/modeling/trajectories/create/drawByParticleID
-/vis/modeling/trajectories/drawByParticleID-0/set e- red
-/vis/scene/notifyHandlers scene-0
-/vis/modeling/trajectories/drawByParticleID-0/set gamma green
-/vis/scene/notifyHandlers scene-0
-/vis/modeling/trajectories/drawByParticleID-0/set e+ blue
-/vis/scene/notifyHandlers scene-0
-/vis/modeling/trajectories/drawByParticleID-0/default/setDrawStepPts true
-/vis/scene/notifyHandlers scene-0
-/vis/modeling/trajectories/drawByParticleID-0/default/setStepPtsSize 4
-/vis/scene/notifyHandlers scene-0
-/vis/scene/endOfEventAction accumulate
-/vis/set/textColour black
-/vis/scene/add/text 10 0 -90 cm 28 4 4 Cherenkov
-/vis/scene/notifyHandlers
-/vis/scene/add/text 10 0 -75 cm 28 4 4 Tungsten
-/vis/scene/notifyHandlers
-/vis/scene/add/text 10 0 -55 cm 28 4 4 Phantom
-/vis/scene/notifyHandlers
-/vis/scene/add/text 10 0 -35 cm 28 4 4 Collimator
-/vis/scene/notifyHandlers
-/vis/scene/add/text 10 0 -20 cm 28 4 4 Scint1
-/vis/scene/notifyHandlers
-/vis/scene/add/text 10 0 5 cm 28 4 4 DWC1
-/vis/scene/notifyHandlers
-/vis/scene/add/text 10 0 30 cm 28 4 4 DWC2
-/vis/scene/notifyHandlers
-/vis/scene/add/text 10 0 60 cm 28 4 4 Scint2
-/vis/scene/notifyHandlers
-/vis/set/textColour black
-/vis/scene/add/text2D 0.05 0.92 22 ! ! Electron
-/vis/scene/notifyHandlers
-/vis/scene/add/text2D 0.05 0.88 22 ! ! Photon
-/vis/scene/notifyHandlers
-/vis/scene/add/text2D 0.05 0.84 22 ! ! Positron
-/vis/scene/notifyHandlers
-/vis/set/colour red
-/vis/scene/add/line2D 0.01 0.92 0.04 0.92
-/vis/scene/notifyHandlers
-/vis/set/colour green
-/vis/scene/add/line2D 0.01 0.88 0.04 0.88
-/vis/scene/notifyHandlers
-/vis/set/colour blue
-/vis/scene/add/line2D 0.01 0.84 0.04 0.84
-/vis/scene/notifyHandlers
-/vis/set/colour
-/vis/viewer/set/autoRefresh true
-/vis/verbose warnings
-/run/beamOn 100
-/vis/scene/notifyHandlers scene-0
-/vis/viewer/flush
-/vis/viewer/refresh viewer-0
-/vis/viewer/update viewer-0
-/control/execute ../vis.mac
-/vis/open OGL
-/vis/sceneHandler/create OGL
-/vis/sceneHandler/attach
-/vis/viewer/create ! ! 600x600-0+0
+/vis/viewer/refresh
 /vis/viewer/set/autoRefresh false
 /vis/verbose errors
 /vis/drawVolume
@@ -109,81 +18,74 @@
 /vis/viewer/set/viewpointThetaPhi 115 150
 /vis/geometry/set/visibility World 0 false
 /vis/scene/notifyHandlers
-/vis/geometry/set/colour Cherenkov 0.65 0.65 0.65 0.20
+/vis/geometry/set/colour Cherenkov 0.75 0.85 0.95 0.30
 /vis/scene/notifyHandlers
-/vis/geometry/set/colour BremsTarget 0.45 0.45 0.45 0.35
+/vis/geometry/set/colour BremsTarget 0.90 0.60 0.60 0.60
 /vis/scene/notifyHandlers
-/vis/geometry/set/colour Phantom 0.75 0.75 0.75 0.20
+/vis/geometry/set/colour Phantom 0.60 0.85 0.75 0.40
 /vis/scene/notifyHandlers
-/vis/geometry/set/colour Collimator 0.35 0.35 0.35 0.45
+/vis/geometry/set/colour Collimator 0.75 0.75 0.75 0.80
 /vis/scene/notifyHandlers
-/vis/geometry/set/colour Scint1 0.70 0.70 0.70 0.20
+/vis/geometry/set/colour Scint1 0.95 0.80 0.55 0.45
 /vis/scene/notifyHandlers
-/vis/geometry/set/colour Scint2 0.70 0.70 0.70 0.20
+/vis/geometry/set/colour Scint2 0.95 0.80 0.55 0.45
 /vis/scene/notifyHandlers
-/vis/geometry/set/colour DWC1 0.80 0.80 0.80 0.15
+/vis/geometry/set/colour DWC1 0.75 0.92 0.80 0.30
 /vis/scene/notifyHandlers
-/vis/geometry/set/colour DWC2 0.80 0.80 0.80 0.15
+/vis/geometry/set/colour DWC2 0.75 0.92 0.80 0.30
 /vis/scene/notifyHandlers
 /vis/scene/add/trajectories smooth
 /tracking/storeTrajectory 2
 /vis/scene/notifyHandlers
 /tracking/storeTrajectory 2
 /vis/modeling/trajectories/create/drawByParticleID
-/vis/modeling/trajectories/drawByParticleID-0/set e- red
+/vis/modeling/trajectories/drawByParticleID-0/set e- blue
 /vis/scene/notifyHandlers scene-0
-/vis/scene/notifyHandlers scene-1
-/vis/modeling/trajectories/drawByParticleID-0/set gamma green
+/vis/modeling/trajectories/drawByParticleID-0/set gamma orange
 /vis/scene/notifyHandlers scene-0
-/vis/scene/notifyHandlers scene-1
-/vis/modeling/trajectories/drawByParticleID-0/set e+ blue
+/vis/modeling/trajectories/drawByParticleID-0/set e+ red
 /vis/scene/notifyHandlers scene-0
-/vis/scene/notifyHandlers scene-1
 /vis/modeling/trajectories/drawByParticleID-0/default/setDrawStepPts false
 /vis/scene/notifyHandlers scene-0
-/vis/scene/notifyHandlers scene-1
 /vis/scene/endOfEventAction accumulate
 /vis/set/textColour black
-/vis/scene/add/text 14 -8 -90 cm 8 0 0 Cherenkov
+/vis/scene/add/text 14 -8 -90 cm 14 0 0 Cherenkov
 /vis/scene/notifyHandlers
-/vis/scene/add/text 14 -8 -75 cm 8 0 0 Tungsten
+/vis/scene/add/text 14 -8 -75 cm 14 0 0 W-Target
 /vis/scene/notifyHandlers
-/vis/scene/add/text 14 -8 -55 cm 8 0 0 Phantom
+/vis/scene/add/text 14 -8 -55 cm 14 0 0 Collimator
 /vis/scene/notifyHandlers
-/vis/scene/add/text 14 -8 -35 cm 8 0 0 Collimator
+/vis/scene/add/text 14 -8 -35 cm 14 0 0 Phantom
 /vis/scene/notifyHandlers
-/vis/scene/add/text 14 -8 -20 cm 8 0 0 Scint1
+/vis/scene/add/text 14 -8 -20 cm 14 0 0 Scint1
 /vis/scene/notifyHandlers
-/vis/scene/add/text 14 -8 5 cm 8 0 0 DWC1
+/vis/scene/add/text 14 -8 5 cm 14 0 0 DWC1
 /vis/scene/notifyHandlers
-/vis/scene/add/text 14 -8 30 cm 8 0 0 DWC2
+/vis/scene/add/text 14 -8 30 cm 14 0 0 DWC2
 /vis/scene/notifyHandlers
-/vis/scene/add/text 14 -8 60 cm 8 0 0 Scint2
+/vis/scene/add/text 14 -8 60 cm 14 0 0 Scint2
 /vis/scene/notifyHandlers
 /vis/set/textColour black
-/vis/scene/add/text2D 0.08 0.16 10 ! ! Electron
+/vis/scene/add/text2D 0.08 0.16 14 ! ! Electron
 /vis/scene/notifyHandlers
-/vis/scene/add/text2D 0.08 0.12 10 ! ! Photon
+/vis/scene/add/text2D 0.08 0.12 14 ! ! Photon
 /vis/scene/notifyHandlers
-/vis/scene/add/text2D 0.08 0.08 10 ! ! Positron
-/vis/scene/notifyHandlers
-/vis/set/colour red
-/vis/scene/add/line2D 0.03 0.16 0.055 0.16
-/vis/scene/notifyHandlers
-/vis/set/colour green
-/vis/scene/add/line2D 0.03 0.12 0.055 0.12
+/vis/scene/add/text2D 0.08 0.08 14 ! ! Positron
 /vis/scene/notifyHandlers
 /vis/set/colour blue
+/vis/scene/add/line2D 0.03 0.16 0.055 0.16
+/vis/scene/notifyHandlers
+/vis/set/colour orange
+/vis/scene/add/line2D 0.03 0.12 0.055 0.12
+/vis/scene/notifyHandlers
+/vis/set/colour red
 /vis/scene/add/line2D 0.03 0.08 0.055 0.08
 /vis/scene/notifyHandlers
 /vis/set/colour
 /vis/viewer/set/autoRefresh true
+/vis/viewer/refresh
 /vis/verbose warnings
-/run/beamOn 100
-/vis/viewer/flush
-/vis/viewer/refresh viewer-1
-/vis/viewer/update viewer-1
-/run/beamOn 1
-/vis/viewer/flush
-/vis/viewer/refresh viewer-1
-/vis/viewer/update viewer-1
+/vis/viewer/set/style surface
+/vis/viewer/refresh
+/vis/viewer/set/hiddenEdge true
+/vis/viewer/refresh
